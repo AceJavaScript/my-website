@@ -9,6 +9,7 @@
   <body>
     <header>
       <h1>Welcome to My Bot's Guide</h1>
+      <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
     </header>
     <main>
       <section>
@@ -30,11 +31,19 @@
         </ul>
       </section>
       <section>
+        <h2>Command Simulator</h2>
+        <input type="text" id="commandBox" placeholder="Type a command..." />
+        <button onclick="simulateCommand()">Run Command</button>
+        <p id="response"></p>
+      </section>
+      <section>
         <h2>Troubleshooting</h2>
-        <p>
-          If the bot isn't responding, try checking permissions or refreshing
-          the bot.
-        </p>
+        <button onclick="toggleFAQ()">Show Troubleshooting Tips</button>
+        <div id="faq" style="display: none">
+          <p>
+            If the bot isn't responding, ensure it has the correct permissions.
+          </p>
+        </div>
       </section>
     </main>
     <script src="script.js"></script>
